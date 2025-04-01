@@ -7,6 +7,7 @@ cookieParser
 compression  
 cors 
 mongoose
+lodash
 
 @types/express
 @types/http  
@@ -15,6 +16,7 @@ mongoose
 @types/compression  
 @types/cors 
 @types/mongoose
+@types/lodash
 
 ## Dev Dependencias
 typescript

@@ -26,13 +26,13 @@ export const login = async (
 
     const expectedHash = authentication(user.authentication.salt, password);
 
-    if (user.authentication.password !== expectedHash.toString()){
+    if (user.authentication.password !== expectedHash){
         res.sendStatus(403);
         return;
     }
 
     const salt = random();
-    user.authentication.sessionToken = authentication(salt, user._id.toString()).toString();
+    user.authentication.sessionToken = authentication(salt, user._id.toString());
 
     await user.save();
 
